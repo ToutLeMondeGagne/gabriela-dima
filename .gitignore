@@ -7,11 +7,14 @@ dist.zip
 
 # Environment variables
 .env
-.env.local
-.env.*.local
+.env.*
+!.env.example
+
+# API secrets
+secrets.php
 
 # TypeScript build cache
-tsconfig.tsbuildinfo
+*.tsbuildinfo
 
 # Editor / IDE
 .vscode/
@@ -40,3 +43,22 @@ CLAUDE.md
 
 # TanStack / framework cache
 .tanstack/
+
+# Auto-generated files
+gabriela_dima/src/routeTree.gen.ts
+
+# Sanity Studio runtime cache
+studio/.sanity/
+
+# PnP (Plug'n'Play package manager)
+.pnp
+.pnp.js
+
+# Certificates
+*.pem
+
+# Local config overrides
+*.local
+
+# Test coverage
+coverage/

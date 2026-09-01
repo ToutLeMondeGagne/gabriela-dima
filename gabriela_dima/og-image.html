@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=1200" />
+  <title>OG Image — Gabriela Dima CFO</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Didact+Gothic&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      width: 1200px;
+      height: 630px;
+      overflow: hidden;
+      font-family: "Didact Gothic", sans-serif;
+      background: #204197;
+    }
+
+    .container {
+      width: 1200px;
+      height: 630px;
+      display: flex;
+      position: relative;
+    }
+
+    /* Decorative background blobs */
+    .blob-1 {
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      background: #C9B5CC;
+      opacity: 0.08;
+      top: -150px;
+      right: -100px;
+      filter: blur(60px);
+    }
+    .blob-2 {
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: #C9B5CC;
+      opacity: 0.06;
+      bottom: -80px;
+      left: 300px;
+      filter: blur(50px);
+    }
+
+    /* Left — photo */
+    .photo-side {
+      width: 420px;
+      height: 630px;
+      flex-shrink: 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .photo-side img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    /* Gradient overlay on photo edge */
+    .photo-side::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, transparent 60%, #204197 100%);
+    }
+
+    /* Right — text */
+    .text-side {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 60px 70px 60px 50px;
+      color: white;
+      position: relative;
+      z-index: 1;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(37, 99, 235, 0.15);
+      border: 1px solid rgba(37, 99, 235, 0.3);
+      border-radius: 999px;
+      padding: 6px 16px;
+      margin-bottom: 28px;
+      width: fit-content;
+    }
+
+    .badge-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #C9B5CC;
+    }
+
+    .badge span {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #e8dcea;
+    }
+
+    .name {
+      font-family: "Cardo", serif;
+      font-size: 58px;
+      font-weight: 700;
+      line-height: 1.05;
+      color: white;
+      margin-bottom: 16px;
+    }
+
+    .name em {
+      color: #C9B5CC;
+      font-style: italic;
+    }
+
+    .tagline {
+      font-size: 20px;
+      font-weight: 400;
+      color: rgba(255,255,255,0.65);
+      line-height: 1.5;
+      margin-bottom: 40px;
+      max-width: 380px;
+    }
+
+    .divider {
+      width: 50px;
+      height: 3px;
+      background: #C9B5CC;
+      border-radius: 2px;
+      margin-bottom: 32px;
+    }
+
+    .credentials {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .cred-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      color: rgba(255,255,255,0.55);
+      font-weight: 500;
+    }
+
+    .cred-dot {
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: #C9B5CC;
+      flex-shrink: 0;
+    }
+
+    /* Bottom domain */
+    .domain {
+      position: absolute;
+      bottom: 36px;
+      right: 70px;
+      font-size: 13px;
+      color: rgba(255,255,255,0.25);
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      z-index: 2;
+    }
+
+    /* Logo mark */
+    .logo {
+      position: absolute;
+      bottom: 30px;
+      left: 50px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      z-index: 2;
+    }
+
+    .logo-circle {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "Cardo", serif;
+      font-style: italic;
+      font-weight: 700;
+      font-size: 18px;
+      color: #204197;  /* navy on white circle */
+    }
+
+    .logo-text {
+      font-size: 13px;
+      font-weight: 600;
+      color: rgba(255,255,255,0.4);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="blob-1"></div>
+    <div class="blob-2"></div>
+
+    <!-- Photo -->
+    <div class="photo-side">
+      <img src="src/assets/gabriela-portrait.png" alt="Gabriela Dima" />
+    </div>
+
+    <!-- Text -->
+    <div class="text-side">
+      <div class="badge">
+        <div class="badge-dot"></div>
+        <span>CFO virtuelle · CPA, MBA</span>
+      </div>
+
+      <div class="name">
+        Gabriela<br /><em>Dima</em>
+      </div>
+
+      <div class="divider"></div>
+
+      <p class="tagline">
+        Partenaire stratégique pour dirigeants de PME en croissance.
+      </p>
+
+      <div class="credentials">
+        <div class="cred-item"><div class="cred-dot"></div> CPA — Ordre des comptables professionnels</div>
+        <div class="cred-item"><div class="cred-dot"></div> MBA en gestion stratégique</div>
+        <div class="cred-item"><div class="cred-dot"></div> 15+ ans d'expérience en PME</div>
+        <div class="cred-item"><div class="cred-dot"></div> 150+ entreprises accompagnées</div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="logo">
+      <div class="logo-circle">G</div>
+      <span class="logo-text">gabrieladima.com</span>
+    </div>
+    <div class="domain">gabrieladima.com</div>
+  </div>
+</body>
+</html>
