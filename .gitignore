@@ -7,8 +7,8 @@ dist.zip
 
 # Environment variables
 .env
-.env.local
-.env.*.local
+.env.*
+!.env.example
 
 # TypeScript build cache
 tsconfig.tsbuildinfo
@@ -40,3 +40,6 @@ CLAUDE.md
 
 # TanStack / framework cache
 .tanstack/
+
+# Auto-generated files
+gabriela_dima/src/routeTree.gen.ts
