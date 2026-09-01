@@ -14,7 +14,7 @@ dist.zip
 secrets.php
 
 # TypeScript build cache
-tsconfig.tsbuildinfo
+*.tsbuildinfo
 
 # Editor / IDE
 .vscode/
@@ -46,3 +46,19 @@ CLAUDE.md
 
 # Auto-generated files
 gabriela_dima/src/routeTree.gen.ts
+
+# Sanity Studio runtime cache
+studio/.sanity/
+
+# PnP (Plug'n'Play package manager)
+.pnp
+.pnp.js
+
+# Certificates
+*.pem
+
+# Local config overrides
+*.local
+
+# Test coverage
+coverage/
