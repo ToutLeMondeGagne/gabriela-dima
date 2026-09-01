@@ -9,7 +9,7 @@
  *     (until then, "onboarding@resend.dev" is the only allowed sender)
  */
 
-define('RESEND_API_KEY', 're_bcoXJAVU_2qboYCJXCb2xYKUmYt9etd1u');
+require_once __DIR__ . '/secrets.php';
 define('TO_EMAIL',       'gdimacpa@gmail.com');
 define('FROM_EMAIL',     'onboarding@resend.dev');
 
